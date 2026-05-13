@@ -3,19 +3,20 @@
  * WooCommerce Registration Notifier
  *
  * @package WC_Reg_Notifier
- * @version 4.0.0
+ * @version 5.0.0
  *
- * Plugin Name: WooCommerce Registration Notifier
+ * Plugin Name: Registration Notifier for WooCommerce
  * Description: Notificação de cadastros com configuração SMTP personalizada
- * Version: 4.0.0
+ * Version: 5.0.0
  * Author: Gabriel Pacheco
  * Text Domain: woocommerce-notificacao-de-registro
  * Domain Path: /languages
  * Requires PHP: 7.4
  * Requires at least: 5.0
+ * Tested up to: 6.7
  *
  * @author Gabriel Pacheco
- * @license GPL v2 or later
+ * @license GPLv2 or later
  * @link https://github.com/gabrielgpacheco/woocommerce-registration-notifier
  *
  * This program is free software; you can redistribute it and/or modify
@@ -31,7 +32,7 @@
 // phpcs:disable WordPress.Files.FileName.InvalidClassFileName
 
 // Security: Prevent direct access.
-defined( 'ABSPATH' ) || die( 'Acesso negado!' );
+defined( 'ABSPATH' ) || die( esc_html__( 'Acesso negado!', 'woocommerce-notificacao-de-registro' ) );
 
 /**
  * Load plugin files and initialize.

@@ -1,4 +1,4 @@
-# WooCommerce Registration Notifier - v4.0.0
+# Registration Notifier for WooCommerce - v5.0.0
 
 A modern, WPCS-compliant WordPress plugin that captures custom registration fields (name, phone) in WooCommerce registration and sends notification emails with configurable SMTP.
 
@@ -32,12 +32,13 @@ A modern, WPCS-compliant WordPress plugin that captures custom registration fiel
 - **WordPress**: 5.0 or higher
 - **WooCommerce**: Latest version
 - **PHPMailer**: Bundled with WordPress (for SMTP)
+- **WordPress 6.5+**: Recommended for `Requires Plugins` header support
 
 ## Installation
 
 1. Download/upload plugin folder to `/wp-content/plugins/`
 2. Go to **Plugins** → **Installed Plugins**
-3. Find "WooCommerce Registration Notifier"
+3. Find "Registration Notifier for WooCommerce"
 4. Click **Activate**
 5. Configure settings in **Settings** → **Notificação de Registros**
 
@@ -255,7 +256,21 @@ See [TESTING.md](TESTING.md) for comprehensive testing guide.
 
 ## Changelog
 
-### Version 4.0.0 (Current)
+### Version 5.0.0 (Current)
+- ✅ readme.txt no formato WordPress.org
+- ✅ load_plugin_textdomain() para carregar traduções
+- ✅ Arquivo .pot para traduções
+- ✅ uninstall.php para limpeza ao desinstalar
+- ✅ Verificação de dependência do WooCommerce
+- ✅ ABSPATH check em todos os arquivos PHP
+- ✅ SMTP password armazenado com base64
+- ✅ Campo de senha SMTP não pré-preenche o valor salvo
+- ✅ Substituído error_log() por trigger_error()
+- ✅ Corrigido basename hardcoded nos links de ação do plugin
+- ✅ Internacionalizada string "Acesso negado!" no arquivo principal
+- ✅ Nome do plugin alterado para "Registration Notifier for WooCommerce"
+
+### Version 4.0.0
 - ✅ Complete OOP refactor with proper namespacing
 - ✅ Full WPCS compliance and security hardening
 - ✅ Nonce verification on all forms
@@ -288,6 +303,6 @@ Gabriel Pacheco
 
 ---
 
-**Last Updated**: May 6, 2026  
-**Plugin Version**: 4.0.0  
+**Last Updated**: May 12, 2026  
+**Plugin Version**: 5.0.0  
 **WPCS Status**: ✅ Compliant

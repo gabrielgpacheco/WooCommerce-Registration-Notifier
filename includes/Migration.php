@@ -6,6 +6,8 @@
  * @since 4.0.0
  */
 
+defined( 'ABSPATH' ) || exit;
+
 namespace WC_Reg_Notifier;
 
 /**
@@ -63,7 +65,7 @@ class Migration {
 					? sanitize_text_field( $old_settings['smtp_username'] )
 					: '',
 				'smtp_password'      => isset( $old_settings['smtp_password'] )
-					? wp_kses_post( $old_settings['smtp_password'] )
+					? base64_encode( sanitize_text_field( $old_settings['smtp_password'] ) )
 					: '',
 			);
 

@@ -6,6 +6,8 @@
  * @since 4.0.0
  */
 
+defined( 'ABSPATH' ) || exit;
+
 namespace WC_Reg_Notifier\Utils;
 
 /**

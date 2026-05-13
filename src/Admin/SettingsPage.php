@@ -6,6 +6,8 @@
  * @since 4.0.0
  */
 
+defined( 'ABSPATH' ) || exit;
+
 namespace WC_Reg_Notifier\Admin;
 
 use WC_Reg_Notifier\Interfaces\Hookable;
@@ -18,6 +20,26 @@ use WC_Reg_Notifier\Interfaces\Hookable;
 class SettingsPage implements Hookable {
 
 	/**
+	 * Plugin file path.
+	 *
+	 * @since 5.0.0
+	 *
+	 * @var string
+	 */
+	private $plugin_file;
+
+	/**
+	 * Constructor.
+	 *
+	 * @since 5.0.0
+	 *
+	 * @param string $plugin_file The main plugin file path.
+	 */
+	public function __construct( $plugin_file ) {
+		$this->plugin_file = $plugin_file;
+	}
+
+	/**
 	 * Register WordPress hooks for this component.
 	 *
 	 * @since 4.0.0
@@ -26,7 +48,7 @@ class SettingsPage implements Hookable {
 	 */
 	public function register_hooks() {
 		add_action( 'admin_menu', array( $this, 'add_admin_menu' ) );
-		add_filter( 'plugin_action_links_woocommerce-notificacao-de-registro/woocommerce-notificacao-de-registro.php', array( $this, 'add_action_links' ) );
+		add_filter( 'plugin_action_links_' . plugin_basename( $this->plugin_file ), array( $this, 'add_action_links' ) );
 	}
 
 	/**

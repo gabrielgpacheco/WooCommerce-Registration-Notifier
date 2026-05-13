@@ -6,6 +6,8 @@
  * @since 4.0.0
  */
 
+defined( 'ABSPATH' ) || exit;
+
 namespace WC_Reg_Notifier\Email;
 
 /**
@@ -93,7 +95,7 @@ class Mailer {
 			$mail->Host       = sanitize_text_field( $options['smtp_host'] );
 			$mail->SMTPAuth   = true;
 			$mail->Username   = sanitize_text_field( $options['smtp_username'] );
-			$mail->Password   = wp_kses_post( $options['smtp_password'] );
+			$mail->Password   = base64_decode( $options['smtp_password'] );
 			$mail->SMTPSecure = sanitize_text_field( $options['smtp_secure'] );
 			$mail->Port       = intval( $options['smtp_port'] );
 
@@ -117,8 +119,7 @@ class Mailer {
 
 		} catch ( \Exception $e ) {
 			// Log error and fallback to wp_mail.
-			// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
-			error_log( 'WC Reg Notifier SMTP Error: ' . $e->getMessage() );
+			trigger_error( 'WC Reg Notifier SMTP Error: ' . esc_html( $e->getMessage() ), E_USER_WARNING );
 			return self::send_with_wp_mail( $to, $subject, $message, $headers );
 		}
 	}

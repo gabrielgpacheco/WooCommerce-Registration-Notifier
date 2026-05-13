@@ -6,6 +6,8 @@
  * @since 4.0.0
  */
 
+defined( 'ABSPATH' ) || exit;
+
 namespace WC_Reg_Notifier\Admin;
 
 use WC_Reg_Notifier\Interfaces\Hookable;
@@ -268,8 +270,9 @@ class Settings implements Hookable {
 					<input
 						type="password"
 						name="wc_reg_notifier_settings[smtp_password]"
-						value="<?php echo esc_attr( $options['smtp_password'] ?? '' ); ?>"
-						class="regular-text" />
+						value="<?php echo esc_attr( ! empty( $options['smtp_password'] ) ? '********' : '' ); ?>"
+						class="regular-text"
+						placeholder="<?php esc_attr_e( 'Deixe em branco para manter a atual', 'woocommerce-notificacao-de-registro' ); ?>" />
 				</td>
 			</tr>
 		</table>

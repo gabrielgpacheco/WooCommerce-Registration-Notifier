@@ -1,0 +1,249 @@
+# Copyright (C) 2026 Gabriel Pacheco
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Registration Notifier for WooCommerce 5.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/gabrielgpacheco/woocommerce-registration-notifier\n"
+"POT-Creation-Date: 2026-05-12 23:37:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language-Team: \n"
+"X-Generator: WordPress Plugin\n"
+
+#: woocommerce-notificacao-de-registro.php:34
+msgid "Acesso negado!"
+msgstr ""
+
+#: src/Admin/Settings.php:57
+msgid "Configurações de Notificação"
+msgstr ""
+
+#: src/Admin/Settings.php:94
+msgid "Configure os e-mails de notificação para novos cadastros"
+msgstr ""
+
+#: src/Admin/Settings.php:108
+msgid "E-mail de Notificação"
+msgstr ""
+
+#: src/Admin/Settings.php:117
+msgid "E-mail do Remetente"
+msgstr ""
+
+#: src/Admin/Settings.php:126
+msgid "Nome do Remetente"
+msgstr ""
+
+#: src/Admin/Settings.php:135
+msgid "Configurações SMTP"
+msgstr ""
+
+#: src/Admin/Settings.php:160
+msgid "E-mail que receberá as notificações de novos cadastros"
+msgstr ""
+
+#: src/Admin/Settings.php:183
+msgid "E-mail que aparecerá como remetente"
+msgstr ""
+
+#: src/Admin/Settings.php:206
+msgid "Nome que aparecerá como remetente"
+msgstr ""
+
+#: src/Admin/Settings.php:223
+msgid "Servidor SMTP"
+msgstr ""
+
+#: src/Admin/Settings.php:230
+msgid "Ex: smtp.seudominio.com"
+msgstr ""
+
+#: src/Admin/Settings.php:234
+msgid "Porta SMTP"
+msgstr ""
+
+#: src/Admin/Settings.php:241
+msgid "Normalmente 587 (TLS) ou 465 (SSL)"
+msgstr ""
+
+#: src/Admin/Settings.php:245
+msgid "Encriptação"
+msgstr ""
+
+#: src/Admin/Settings.php:248
+msgid "Nenhuma"
+msgstr ""
+
+#: src/Admin/Settings.php:255
+msgid "Usuário SMTP"
+msgstr ""
+
+#: src/Admin/Settings.php:262
+msgid "Normalmente seu e-mail completo"
+msgstr ""
+
+#: src/Admin/Settings.php:266
+msgid "Senha SMTP"
+msgstr ""
+
+#: src/Admin/Settings.php:271
+msgid "Deixe em branco para manter a atual"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:41
+msgid "Configurações de Notificação"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:42
+msgid "Notificação de Registros"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:59 src/Admin/TestEmail.php:43
+msgid "Acesso negado!"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:66
+msgid "Configurações de Notificação de Registros"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:70
+msgid "Configurações salvas com sucesso!"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:78
+msgid "Salvar Configurações"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:83
+msgid "Testar Configuração SMTP"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:84
+msgid "Envie um e-mail de teste para verificar se as configurações estão corretas."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:90
+msgid "E-mail de teste"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:98
+msgid "Enviar E-mail de Teste"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:119
+msgid "Configurações"
+msgstr ""
+
+#: src/Admin/TestEmail.php:49
+msgid "Verificação de segurança falhou!"
+msgstr ""
+
+#: src/Admin/TestEmail.php:59
+msgid "E-mail de teste não fornecido!"
+msgstr ""
+
+#: src/Admin/TestEmail.php:66
+msgid "Teste de configuração SMTP - %s"
+msgstr ""
+
+#: src/Admin/TestEmail.php:80
+msgid "E-mail de teste enviado com sucesso para %s"
+msgstr ""
+
+#: src/Admin/TestEmail.php:89
+msgid "Falha ao enviar e-mail de teste. Verifique os logs de erro."
+msgstr ""
+
+#: src/Frontend/RegistrationForm.php:53
+msgid "Nome completo"
+msgstr ""
+
+#: src/Frontend/RegistrationForm.php:67
+msgid "Telefone com DDD"
+msgstr ""
+
+#: src/Frontend/RegistrationForm.php:77
+msgid "Formato: (99) 99999-9999"
+msgstr ""
+
+#: src/Frontend/RegistrationForm.php:163
+msgid "[%1$s] Novo cadastro: %2$s"
+msgstr ""
+
+#: src/Email/Template.php:37
+msgid "Novo cadastro"
+msgstr ""
+
+#: src/Email/Template.php:42
+msgid "Novo usuário registrado"
+msgstr ""
+
+#: src/Email/Template.php:48
+msgid "Nome Completo:"
+msgstr ""
+
+#: src/Email/Template.php:56
+msgid "E-mail:"
+msgstr ""
+
+#: src/Email/Template.php:64
+msgid "Telefone:"
+msgstr ""
+
+#: src/Email/Template.php:72
+msgid "Data do Cadastro:"
+msgstr ""
+
+#: src/Email/Template.php:80
+msgid "Perfil:"
+msgstr ""
+
+#: src/Email/Template.php:84
+msgid "Ver perfil completo"
+msgstr ""
+
+#: src/Email/Template.php:111
+msgid "Teste de configuração"
+msgstr ""
+
+#: src/Email/Template.php:116
+msgid "Teste de Configuração SMTP"
+msgstr ""
+
+#: src/Email/Template.php:120
+msgid "Este é um e-mail de teste enviado pelo plugin WooCommerce Registration Notifier."
+msgstr ""
+
+#: src/Email/Template.php:123
+msgid "Se você recebeu este e-mail, suas configurações de SMTP estão funcionando corretamente."
+msgstr ""
+
+#: src/Utils/Validator.php:45
+msgid "Nome é obrigatório!"
+msgstr ""
+
+#: src/Utils/Validator.php:47
+msgid "Nome muito longo!"
+msgstr ""
+
+#: src/Utils/Validator.php:66
+msgid "Telefone é obrigatório!"
+msgstr ""
+
+#: src/Utils/Validator.php:68
+msgid "Formato de telefone inválido! Use: (99) 99999-9999"
+msgstr ""
+
+#: src/Utils/Validator.php:87
+msgid "E-mail é obrigatório!"
+msgstr ""
+
+#: src/Utils/Validator.php:89
+msgid "E-mail inválido!"
+msgstr ""
+
+#: src/Plugin.php:104
+msgid "O plugin %s requer o WooCommerce para funcionar corretamente. Por favor, instale e ative o WooCommerce."
+msgstr ""

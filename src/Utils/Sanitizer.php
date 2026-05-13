@@ -6,6 +6,8 @@
  * @since 4.0.0
  */
 
+defined( 'ABSPATH' ) || exit;
+
 namespace WC_Reg_Notifier\Utils;
 
 /**
@@ -128,18 +130,21 @@ class Sanitizer {
 	/**
 	 * Sanitize SMTP password.
 	 *
-	 * Note: Passwords are not sanitized with standard functions to preserve
-	 * special characters. Escaping is handled during output/retrieval.
+	 * Encodes the password with base64 for safe storage to preserve
+	 * special characters.
 	 *
-	 * @since 4.0.0
+	 * @since 5.0.0
 	 *
 	 * @param mixed $password The SMTP password to sanitize.
 	 *
-	 * @return string Sanitized password.
+	 * @return string Base64-encoded password.
 	 */
 	public static function sanitize_smtp_password( $password ) {
-		// Use wp_kses_post to allow some special characters while preventing XSS.
-		return wp_kses_post( $password );
+		if ( '********' === $password ) {
+			$options = get_option( 'wc_reg_notifier_settings', array() );
+			return $options['smtp_password'] ?? '';
+		}
+		return base64_encode( sanitize_text_field( $password ) );
 	}
 
 	/**
